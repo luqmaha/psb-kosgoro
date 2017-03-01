@@ -1,2 +1,2 @@
-# PSB Online SMK
+# PSB-SMK
 Aplikasi pendaftaran siswa baru SMK
