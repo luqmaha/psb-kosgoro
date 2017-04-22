@@ -14,9 +14,9 @@
     require_once ('../lib/config.php');
 
     session_start();
-    if ($_SESSION['usr_username']){
+    if ($_SESSION['usr_username']) {
         header('location:admin.php');
-    }else{
+    } else {
 ?>
 
 <!DOCTYPE html>

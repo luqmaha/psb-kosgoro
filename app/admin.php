@@ -12,9 +12,9 @@
  */
  
     session_start();
-    if (empty($_SESSION['usr_username'])){
+    if ( empty($_SESSION['usr_username']) ) {
         header('location:./');
-    } else{
+    } else {
         require_once ('../lib/config.php');
     }
 ?>

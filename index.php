@@ -12,7 +12,7 @@
  */
 
  error_reporting(0);
- require_once('lib/config.php');
+ require( dirname( __FILE__ ) . '/lib/config.php' );
 ?>
 
 <!DOCTYPE html>
@@ -76,27 +76,28 @@
     <div id="wrap">
         <div class="container">
 
-        <?php require_once('menu.php'); ?>
+        <?php require( dirname( __FILE__ ) . '/menu.php' ); ?>
+        
     
             <div class="inner">
 
                 <?php
 
-                    if(isset($_GET['ref']) && strlen($_GET['ref']) > 0)
+                    if( isset($_GET['ref']) && strlen($_GET['ref']) > 0 )
                     {
-                        $ref=str_replace(".","/",$_GET['ref']).".php";
+                        $ref = str_replace(".","/",$_GET['ref']).".php";
                     }
                     else
                     {
-                        $ref="home.php";    
+                        $ref = "home.php";    
                     }
-                    if(file_exists("system/".$ref))
+                    if( file_exists("system/".$ref) )
                     {
-                        include("system/".$ref);    
+                        include("system/".$ref);
                     }
                     else
                     {
-                        include("system/home.php");   
+                        include("system/home.php");
                     }  
                 ?>
                 

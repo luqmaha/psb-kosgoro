@@ -12,7 +12,7 @@
  */
 
 session_start();
-if (empty($_SESSION['usr_username'])){
+if ( empty($_SESSION['usr_username']) ) {
     header('location:./');
 }else{
     require_once ('../lib/config.php');
@@ -22,16 +22,16 @@ if (empty($_SESSION['usr_username'])){
 
 <?php
 
-if(isset($_GET['rdr']) && strlen($_GET['rdr'])>0)
+if( isset($_GET['rdr']) && strlen($_GET['rdr']) > 0 )
 {
-	$rdr=str_replace(".","/",$_GET['rdr']).".php";
+	$rdr = str_replace(".","/",$_GET['rdr']).".php";
 } 
 else 
 {
-	$rdr="dash.php";
+	$rdr = "dash.php";
 }
 
-if(file_exists("modul/".$rdr))
+if( file_exists("modul/".$rdr) )
 {
 	include("modul/".$rdr);
 } 
